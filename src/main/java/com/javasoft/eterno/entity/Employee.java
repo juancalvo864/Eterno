@@ -1,5 +1,6 @@
 package com.javasoft.eterno.entity;
 
+import com.javasoft.eterno.dto.EmployeeDTO;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
