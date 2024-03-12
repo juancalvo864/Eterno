@@ -17,13 +17,13 @@ public class EmployeeController {
     private EmployeeService employeeService;
     //crear un trabajador
     @PostMapping
-    public ResponseEntity<EmployeeDTO> createEmploye(@RequestBody EmployeeDTO employeeDTO){
+    public ResponseEntity<EmployeeDTO> createEmployee(@RequestBody EmployeeDTO employeeDTO){
         EmployeeDTO savedEmployee = employeeService.createEmployee(employeeDTO);
         return new ResponseEntity<>(savedEmployee, HttpStatus.CREATED);
     }
 
     //consultar un trabajador por id
-    @GetMapping({"id"})
+    @GetMapping("{id}")
     public ResponseEntity<EmployeeDTO> getEmployeeById(@PathVariable("id") Long employeeId){
         EmployeeDTO employeeDTO = employeeService.getEmployeeById(employeeId);
         return ResponseEntity.ok(employeeDTO);
