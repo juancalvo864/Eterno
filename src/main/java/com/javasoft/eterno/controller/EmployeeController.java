@@ -25,8 +25,8 @@ public class EmployeeController {
     //consultar un trabajador por id
     @GetMapping("{id}")
     public ResponseEntity<EmployeeDTO> getEmployeeById(@PathVariable("id") Long employeeId){
-        EmployeeDTO employeeDTO = employeeService.getEmployeeById(employeeId);
-        return ResponseEntity.ok(employeeDTO);
+        EmployeeDTO employee = employeeService.getEmployeeById(employeeId);
+        return ResponseEntity.ok(employee);
     }
 
     //consultar todos los trabajadores
